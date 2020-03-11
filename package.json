@@ -30,6 +30,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-limit": "0.0.2",
     "helmet": "^3.21.3",
     "knex": "^0.20.11",
     "sqlite3": "^4.1.1"
