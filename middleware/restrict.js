@@ -9,12 +9,12 @@ function restrict() {
 			res.status(401).json(authErr);
 		}
 		try {
-			const userCheck = Users.findBy({ username }).first();
+			const userCheck = await Users.findBy({ username }).first();
 
 			if (!userCheck) {
 				res.status(401).json(authErr);
 			}
-			const passwordCheck = bcrypt.compare(password, userCheck.password);
+			const passwordCheck = await bcrypt.compare(password, userCheck.password);
 
 			if (!passwordCheck) {
 				res.status(401).json(authErr);
