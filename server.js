@@ -2,11 +2,13 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const authRouter = require('./auth/auth-router');
+const userRouter = require('./users/users-router');
 const router = express();
 
 router.use(express.json());
 
 router.use('/api', authRouter);
+router.use('/api', userRouter);
 
 router.get('/', (req, res) => {
 	res.status(200).json({ message: 'welcome to users API' });
