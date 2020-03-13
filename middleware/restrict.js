@@ -1,8 +1,8 @@
 function restrict() {
-  const authErr = { message: 'invalid credentials' };
+  const authErr = { message: 'You Shall Not Pass!' };
   return async (req, res, next) => {
     try {
-      if (!res.session || !req.session.user) {
+      if (!req.session || !req.session.user) {
         return res.status(401).json(authErr);
       }
       next();
