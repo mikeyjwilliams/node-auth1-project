@@ -1,6 +1,3 @@
-// const Users = require('../users/users-model');
-// const bcrypt = require('bcryptjs');
-
 function restrict() {
   const authErr = { message: 'invalid credentials' };
   return async (req, res, next) => {
