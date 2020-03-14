@@ -1,0 +1,40 @@
+{
+  "name": "node-auth1-project",
+  "version": "1.0.0",
+  "description": "## Topics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon -r dotenv/config index.js",
+    "start": "node index.js",
+    "m-rollback": "npx knex migrate:rollback",
+    "m-latest": "npx knex migrate:latest",
+    "db-seed": "npx knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeyjwilliams/node-auth1-project.git"
+  },
+  "keywords": [],
+  "author": "Michael Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeyjwilliams/node-auth1-project/issues"
+  },
+  "homepage": "https://github.com/mikeyjwilliams/node-auth1-project#readme",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^1.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-limit": "0.0.2",
+    "express-session": "^1.17.0",
+    "helmet": "^3.21.3",
+    "knex": "^0.20.11",
+    "sqlite3": "^4.1.1"
+  }
+}
